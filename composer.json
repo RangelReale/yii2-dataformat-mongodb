@@ -1,0 +1,23 @@
+{
+    "name": "RangelReale/yii2-dataformat-mongodb",
+    "description": "Yii component for MongoDB data formatting to and from native types",
+    "keywords": ["yii2", "format", "parse", "dataformat", "mongodb"],
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Rangel Reale",
+            "email": "rangelspam@gmail.com"
+        }
+    ],
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "*",
+        "RangelReale/yii2-dataformat": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RangelReale\\dataformat\\mongodb\\": ""
+        }
+    }    
+}
