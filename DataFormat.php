@@ -46,6 +46,15 @@ class DataFormat extends BaseDataFormat
         return new \MongoDate($value);
     }    
     
+    public function asMongoid($value)
+    {
+        if ($value === null) {
+            return null;
+        }
+        
+        return new \MongoId($value);
+    }
+    
     /**
      * @inheritdoc
      */
@@ -92,5 +101,18 @@ class DataFormat extends BaseDataFormat
         }
         
         throw new InvalidConfigException('Invalid MongoDB date format');        
+    }    
+    
+    public function parseMongoid($value)
+    {
+        if ($value === null) {
+            return null;
+        }
+
+        if ($value instanceof \MongoId) {
+            return (string)$value;
+        }
+        
+        throw new InvalidConfigException('Invalid MongoDB ID format');        
     }    
 }
