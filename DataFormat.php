@@ -48,7 +48,7 @@ class DataFormat extends BaseDataFormat
     
     public function asMongoid($value)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
         
@@ -105,7 +105,7 @@ class DataFormat extends BaseDataFormat
     
     public function parseMongoid($value)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
 
