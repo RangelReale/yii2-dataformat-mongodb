@@ -15,7 +15,7 @@ class DataFormat extends BaseDataFormat
      */
     public function asDate($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
         
@@ -27,7 +27,7 @@ class DataFormat extends BaseDataFormat
      */
     public function asTime($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
         
@@ -39,7 +39,7 @@ class DataFormat extends BaseDataFormat
      */
     public function asDatetime($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
         
@@ -60,7 +60,7 @@ class DataFormat extends BaseDataFormat
      */
     public function parseDate($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
         
@@ -76,7 +76,7 @@ class DataFormat extends BaseDataFormat
      */
     public function parseTime($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
 
@@ -92,7 +92,7 @@ class DataFormat extends BaseDataFormat
      */
     public function parseDatetime($value, $format = null)
     {
-        if ($value === null) {
+        if ($value === null || $value == '') {
             return null;
         }
 
